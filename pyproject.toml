@@ -1,0 +1,26 @@
+[project]
+name = "aztools"
+version = "0.1.0"
+description = "Python Azure tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "azure-identity>=1.25.2",
+    "azure-keyvault-secrets>=4.10.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9",
+    "pyright>=1.1",
+    "pytest>=8",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
